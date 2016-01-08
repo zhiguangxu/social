@@ -26,4 +26,8 @@ class User < ActiveRecord::Base
 			leaders << leader
 		end
 	end
+	
+	def timeline_user_ids
+		leader_ids + [id]
+	end
 end
